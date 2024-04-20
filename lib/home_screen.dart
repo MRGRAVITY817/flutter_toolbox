@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/router.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +12,8 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/second');
-          },
-          child: const Text('Go to Second Page'),
+          onPressed: () => const HeadspaceWelcomeRoute().go(context),
+          child: const Text('HeadSpace Welcome Screen'),
         ),
       ),
     );
